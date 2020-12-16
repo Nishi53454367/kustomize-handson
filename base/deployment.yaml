@@ -3,11 +3,10 @@ kind: Deployment
 metadata:
   name: sample
 spec:
+  selector:
+    matchLabels:
+      app: sample
   template:
     metadata:
       labels:
         app: sample
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:alpine
