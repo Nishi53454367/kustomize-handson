@@ -1,8 +1,9 @@
+# 追加対象はbaseの中とapiVersion、kind、metadata.nameのどれかは違う内容にすること(全て同じだと既にbaseにありますエラーになる)
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: deployment-test
 spec:
-  replicas: 3
+  replicas: 1
   ports:
   - containerPort: 1010

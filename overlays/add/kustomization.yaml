@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 # buildするリソースを指定
+# basesフィールドは非推奨のため、resourcesでbaseを指定する
 resources:
- - ../../base       # basesフィールドは非推奨のため、resourcesでbaseを指定する
+ - ../../base
  - deployment.yaml
