@@ -1,0 +1,24 @@
+# base/nginx2を書き換えるため、apiVersion、kind、metadata.nameを合わせる必要がある
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Deployment
+metadata:
+  name: nginx2
+spec:
+  # replicasを追加
+  # replicasの定義はないため、追加される
+  replicas: 1
+  # - (selectorは指定がないためbase/nginx2配下の内容のまま) -
+  template:
+    # - (metadataは指定がないためbase/nginx2配下の内容のまま) -
+    # spec配下を修正
+    # 元々、base/nginx2配下にspec配下の記述があるため、追加ではなく書き換えとなる。
+    spec:
+      containers:
+      - name: nginx-18
+        image: nginx:1.18.0
+        ports:
+        - containerPort: 80
+      - name: nginx-17
+        image: nginx:1.17.0
+        ports:
+        - containerPort: 80

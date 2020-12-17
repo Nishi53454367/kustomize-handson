@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+# nginx1とnginx2を組み合わせて作成した上で、
+resources:
+ - ../../base/nginx1
+ - ../../base/nginx2
+# nginx2をpatchするyamlを定義
+patches:
+ - deployment.yaml
