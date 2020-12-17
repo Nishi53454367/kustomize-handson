@@ -3,3 +3,4 @@ kind: Kustomization
 # buildするリソースを指定
 resources:
  - deployment.yaml
+ - service.yaml
