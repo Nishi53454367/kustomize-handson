@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample
+spec:
+  template:
+    spec:
+      containers:
+      - name: nginx-cra
+        image: gcr.io/gitops-react-app/create_react_app:3
+        ports:
+        - containerPort: 80
