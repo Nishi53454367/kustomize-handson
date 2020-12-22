@@ -1,5 +1,5 @@
 # base/nginx2を書き換えるため、apiVersion、kind、metadata.nameを合わせる必要がある
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx2

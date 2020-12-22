@@ -1,5 +1,5 @@
 # 上書き対象はbaseの中とapiVersion、kind、metadata.nameは同じにすること
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample
