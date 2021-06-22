@@ -1,2 +1,2 @@
 # kustomize-handson
-Kustomoize勉強用
+kustomize勉強用
